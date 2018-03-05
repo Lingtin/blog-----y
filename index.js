@@ -41,7 +41,7 @@ app.use("/api", require("./routers/api"));
 app.use("/admin", require("./routers/admin"));
 
 
-mongoose.connect("mongodb://localhost:888/nodetest", function (err) {
+mongoose.connect("mongodb://localhost:27017/nodetest", function (err) {
     if (err) {
         console.log("数据库连接失败")
     } else {
@@ -50,7 +50,5 @@ mongoose.connect("mongodb://localhost:888/nodetest", function (err) {
     }
 
 });
-
-//app.listen(888);
 
 open("http://localhost:888")
